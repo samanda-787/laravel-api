@@ -5,12 +5,12 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProductController;
 
 // Users routes
-Route::get('/users', [UserController::class, 'index'])->name('users.index');
-Route::get('/users/{id}', [UserController::class, 'show'])->name('users.show');
+Route::get('api/users', [UserController::class, 'index'])->name('users.index');
+Route::get('api/users/{id}', [UserController::class, 'show'])->name('users.show');
 
 // Products routes
-Route::get('/products', [ProductController::class, 'index'])->name('products.index');
-Route::get('/products/{id}', [ProductController::class, 'show'])->name('products.show');
+Route::get('api/products', [ProductController::class, 'index'])->name('products.index');
+Route::get('api/products/{id}', [ProductController::class, 'show'])->name('products.show');
 
 // Homepage
 Route::get('/', function () {
